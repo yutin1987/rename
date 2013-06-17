@@ -68,10 +68,9 @@ $ ->
   todo = $('todo')
   keyin = $('#keyin')
   report = $('#report td')
-  inbar = $('#inbar')
-
-  body.on 'touchstart', (e) ->
-    e.preventDefault()
+  
+  body.on 'touchstart keydown', (e) ->
+    e.preventDefault() #e.keyCode is 13
     if $(body).hasClass 'report'
       $('.num',keyin).text '?'
       $(body).removeClass 'report'
@@ -83,23 +82,6 @@ $ ->
       $(report).text('ERROR') unless dost
       $(body).addClass 'report'
 
-  inbar.on 'keydown', (e) ->
-    if e.keyCode is 13
-      $(body).toggleClass 'report'
-      num = parseInt($(@).val(),10)
-      if num > 0 and num < 10
-        num = Math.floor(Math.random() * Q.length)
-        dost = Q.slice(num,num+1)[0]
-        Q.splice(num,1)
-        $(report).text(dost)
-        $(report).text('ERROR') unless dost
-
-      $(@).val '_'
-    else
-      $(@).val ''
-
-  inbar.on 'keyup', () ->
-    $('.num',keyin).text $(@).val()
 
   update = () ->
 

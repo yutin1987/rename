@@ -12,15 +12,14 @@ Q.sort(function() {
 });
 
 $(function() {
-  var body, inbar, keyin, report, todo, update, win;
+  var body, keyin, report, todo, update, win;
 
   win = $(window);
   body = $('body');
   todo = $('todo');
   keyin = $('#keyin');
   report = $('#report td');
-  inbar = $('#inbar');
-  body.on('touchstart', function(e) {
+  body.on('touchstart keydown', function(e) {
     var dost, num;
 
     e.preventDefault();
@@ -37,29 +36,6 @@ $(function() {
       }
       return $(body).addClass('report');
     }
-  });
-  inbar.on('keydown', function(e) {
-    var dost, num;
-
-    if (e.keyCode === 13) {
-      $(body).toggleClass('report');
-      num = parseInt($(this).val(), 10);
-      if (num > 0 && num < 10) {
-        num = Math.floor(Math.random() * Q.length);
-        dost = Q.slice(num, num + 1)[0];
-        Q.splice(num, 1);
-        $(report).text(dost);
-        if (!dost) {
-          $(report).text('ERROR');
-        }
-      }
-      return $(this).val('_');
-    } else {
-      return $(this).val('');
-    }
-  });
-  inbar.on('keyup', function() {
-    return $('.num', keyin).text($(this).val());
   });
   update = function() {
     if (__indexOf.call(window, 'ontouchstart') < 0) {

@@ -10,9 +10,9 @@
         n.ss = a.pad(n.s, 2), n.z = e.getMilliseconds(), n.zz = n.z + "z", n.zzz = a.pad(n.z, 3), 
         n.ap = 12 > n.H ? "am" : "pm", n.a = 12 > n.H ? "am" : "pm", n.AP = 12 > n.H ? "AM" : "PM", 
         n.A = 12 > n.H ? "AM" : "PM";
-        for (var s = 0, o = "", i = ""; t.length > s; ) {
-            for (i = t.charAt(s); t.length > s + 1 && void 0 !== n[i + t.charAt(s + 1)]; ) i += t.charAt(++s);
-            o += void 0 !== n[i] ? n[i] : i, s++;
+        for (var s = 0, o = "", u = ""; t.length > s; ) {
+            for (u = t.charAt(s); t.length > s + 1 && void 0 !== n[u + t.charAt(s + 1)]; ) u += t.charAt(++s);
+            o += void 0 !== n[u] ? n[u] : u, s++;
         }
         return o;
     }, Date.formatLogic = {
@@ -42,61 +42,61 @@
         r.m = "([0-9][0-9]?)", r.mm = "([0-9][0-9])", r.s = "([0-9][0-9]?)", r.ss = "([0-9][0-9])", 
         r.z = "([0-9][0-9]?[0-9]?)", r.zz = "([0-9][0-9]?[0-9]?)[z]", r.zzz = "([0-9][0-9][0-9])", 
         r.ap = "([ap][m])", r.a = "([ap][m])", r.AP = "([AP][M])", r.A = "([AP][M])";
-        for (var n = Date.parseLogic, s = 0, o = "", i = Array(""), u = ""; t.length > s; ) {
-            for (u = t.charAt(s); t.length > s + 1 && void 0 !== r[u + t.charAt(s + 1)]; ) u += t.charAt(++s);
-            void 0 !== r[u] ? (o += r[u], i[i.length] = u) : o += u, s++;
+        for (var n = Date.parseLogic, s = 0, o = "", u = Array(""), y = ""; t.length > s; ) {
+            for (y = t.charAt(s); t.length > s + 1 && void 0 !== r[y + t.charAt(s + 1)]; ) y += t.charAt(++s);
+            void 0 !== r[y] ? (o += r[y], u[u.length] = y) : o += y, s++;
         }
-        var y = RegExp(o), d = e.match(y);
-        if (void 0 === d || d.length !== i.length) return void 0;
-        for (s = 0; i.length > s; s++) if ("" !== i[s]) switch (i[s]) {
+        var d = RegExp(o), i = e.match(d);
+        if (void 0 === i || i.length !== u.length) return void 0;
+        for (s = 0; u.length > s; s++) if ("" !== u[s]) switch (u[s]) {
           case "yyyy":
           case "yyy":
-            a.setYear(n.parseInt(d[s]));
+            a.setYear(n.parseInt(i[s]));
             break;
 
           case "yy":
-            a.setYear(2e3 + n.parseInt(d[s]));
+            a.setYear(2e3 + n.parseInt(i[s]));
             break;
 
           case "MM":
           case "M":
-            a.setMonth(n.parseInt(d[s]) - 1);
+            a.setMonth(n.parseInt(i[s]) - 1);
             break;
 
           case "dd":
           case "d":
-            a.setDate(n.parseInt(d[s]));
+            a.setDate(n.parseInt(i[s]));
             break;
 
           case "hh":
           case "h":
           case "HH":
           case "H":
-            a.setHours(n.parseInt(d[s]));
+            a.setHours(n.parseInt(i[s]));
             break;
 
           case "mm":
           case "m":
-            a.setMinutes(n.parseInt(d[s]));
+            a.setMinutes(n.parseInt(i[s]));
             break;
 
           case "ss":
           case "s":
-            a.setSeconds(n.parseInt(d[s]));
+            a.setSeconds(n.parseInt(i[s]));
             break;
 
           case "zzz":
           case "zz":
           case "z":
-            a.setMilliseconds(n.parseInt(d[s]));
+            a.setMilliseconds(n.parseInt(i[s]));
             break;
 
           case "AP":
           case "A":
           case "ap":
           case "a":
-            ("PM" === d[s] || "pm" === d[s]) && 12 > a.getHours() && a.setHours(a.getHours() + 12), 
-            "AM" !== d[s] && "am" !== d[s] || 12 !== a.getHours() || a.setHours(0);
+            ("PM" === i[s] || "pm" === i[s]) && 12 > a.getHours() && a.setHours(a.getHours() + 12), 
+            "AM" !== i[s] && "am" !== i[s] || 12 !== a.getHours() || a.setHours(0);
         }
         return a;
     }, Date.parseLogic = {
@@ -111,9 +111,9 @@
         return this.setTime(Date.parseFormat(e, t).getTime()), this;
     };
 })(), String.prototype.toSize = function(e) {
-    var t, a, r, n, s, o, i;
+    var t, a, r, n, s, o, u;
     for (null == e && (e = 0), s = [ "bytes", "KB", "MB", "GB", "TB" ], r = parseInt(this, 10) || 0, 
-    t = o = 0, i = s.length; i > o; t = ++o) if (a = s[t], n = r / Math.pow(1024, t), 
+    t = o = 0, u = s.length; u > o; t = ++o) if (a = s[t], n = r / Math.pow(1024, t), 
     1024 > n) return 0 === t ? 0 === r ? "0KB" : "> 1KB" : n.toFixed(e) + s[t];
     return (r / Math.pow(1024, s.length - 1)).toFixed(e) + s[s.length - 1];
 };
@@ -127,23 +127,16 @@ Q = [ "對party中任何一位異性告白（或Andy指定）", "自己脫一件
 Q.sort(function() {
     return Math.random() > .5 ? !0 : !1;
 }), $(function() {
-    var e, t, a, r, n, s, o;
-    return o = $(window), e = $("body"), n = $("todo"), a = $("#keyin"), r = $("#report td"), 
-    t = $("#inbar"), e.on("touchstart", function(t) {
+    var e, t, a, r, n, s;
+    return s = $(window), e = $("body"), r = $("todo"), t = $("#keyin"), a = $("#report td"), 
+    e.on("touchstart keydown", function(r) {
         var n, s;
-        return t.preventDefault(), $(e).hasClass("report") ? ($(".num", a).text("?"), $(e).removeClass("report")) : (s = Math.floor(Math.random() * Q.length), 
-        n = Q.slice(s, s + 1)[0], Q.splice(s, 1), $(r).text(n), n || $(r).text("ERROR"), 
+        return r.preventDefault(), $(e).hasClass("report") ? ($(".num", t).text("?"), $(e).removeClass("report")) : (s = Math.floor(Math.random() * Q.length), 
+        n = Q.slice(s, s + 1)[0], Q.splice(s, 1), $(a).text(n), n || $(a).text("ERROR"), 
         $(e).addClass("report"));
-    }), t.on("keydown", function(t) {
-        var a, n;
-        return 13 === t.keyCode ? ($(e).toggleClass("report"), n = parseInt($(this).val(), 10), 
-        n > 0 && 10 > n && (n = Math.floor(Math.random() * Q.length), a = Q.slice(n, n + 1)[0], 
-        Q.splice(n, 1), $(r).text(a), a || $(r).text("ERROR")), $(this).val("_")) : $(this).val("");
-    }), t.on("keyup", function() {
-        return $(".num", a).text($(this).val());
-    }), s = function() {
-        return 0 > __indexOf.call(window, "ontouchstart") && t.focus(), setTimeout(function() {
-            return s();
+    }), n = function() {
+        return 0 > __indexOf.call(window, "ontouchstart") && inbar.focus(), setTimeout(function() {
+            return n();
         }, 1500);
-    }, s();
+    }, n();
 });

@@ -59,7 +59,7 @@ Q = [
   '找一位異性幫他的手指頭戴保險套'
 ]
 
-array.prototype.rand = () ->
+Array.prototype.rand = () ->
     num = Math.floor(Math.random() * this.length)
     return this.splice(num,1)[0]
 

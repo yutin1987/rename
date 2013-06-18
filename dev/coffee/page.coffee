@@ -72,7 +72,7 @@ $ ->
   keyin = $('#keyin')
   report = $('#report td')
   
-  body.on 'touchstart mousedown keydown', (e) ->
+  body.on 'touchstart, mousedown, keydown', (e) ->
     e.preventDefault() #e.keyCode is 13
     if $(body).hasClass 'report'
       $('.num',keyin).text '?'

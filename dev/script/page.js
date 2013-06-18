@@ -21,7 +21,7 @@ $(function() {
   todo = $('todo');
   keyin = $('#keyin');
   report = $('#report td');
-  return body.on('touchstart keydown', function(e) {
+  return body.on('touchstart mousedown keydown', function(e) {
     var dost;
 
     e.preventDefault();

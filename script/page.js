@@ -129,7 +129,7 @@ array.prototype.rand = function() {
 }), $(function() {
     var e, t, a, r, n;
     return n = $(window), e = $("body"), r = $("todo"), t = $("#keyin"), a = $("#report td"), 
-    e.on("touchstart keydown", function(r) {
+    e.on("touchstart mousedown keydown", function(r) {
         var n;
         return r.preventDefault(), $(e).hasClass("report") ? ($(".num", t).text("?"), $(e).removeClass("report"), 
         1 > Q.length ? location.reload() : void 0) : (n = Q.rand(), n ? $(a).text(n) : $(a).text("ERROR"), 

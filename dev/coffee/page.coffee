@@ -60,8 +60,8 @@ Q = [
 ]
 
 array.prototype.rand = () ->
-    num = Math.floor(Math.random() * Q.length)
-    return Q.splice(num,1)[0]
+    num = Math.floor(Math.random() * this.length)
+    return this.splice(num,1)[0]
 
 Q.sort () -> 0.5 - Math.random()
 

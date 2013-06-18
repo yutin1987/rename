@@ -5,8 +5,8 @@ Q = ['對party中任何一位異性告白（或Andy指定）', '自己脫一件�
 array.prototype.rand = function() {
   var num;
 
-  num = Math.floor(Math.random() * Q.length);
-  return Q.splice(num, 1)[0];
+  num = Math.floor(Math.random() * this.length);
+  return this.splice(num, 1)[0];
 };
 
 Q.sort(function() {

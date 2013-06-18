@@ -63,6 +63,10 @@ Array.prototype.rand = () ->
     num = Math.floor(Math.random() * this.length)
     return this.splice(num,1)[0]
 
+QTemp = []
+QTemp.push Q.rand() for i in [1..Q.length]
+Q = QTemp
+
 Q.sort () -> 0.5 - Math.random()
 
 $ ->

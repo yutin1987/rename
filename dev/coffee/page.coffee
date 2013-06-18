@@ -59,8 +59,11 @@ Q = [
   '找一位異性幫他的手指頭戴保險套'
 ]
 
-Q.sort () ->
-  if Math.random() > 0.5 then true else false
+array.prototype.rand = () ->
+    num = Math.floor(Math.random() * Q.length)
+    return Q.splice(num,1)[0]
+
+Q.sort () -> 0.5 - Math.random()
 
 $ ->
   win = $(window)
@@ -74,19 +77,11 @@ $ ->
     if $(body).hasClass 'report'
       $('.num',keyin).text '?'
       $(body).removeClass 'report'
+      location.reload() if Q.length < 1
     else
-      num = Math.floor(Math.random() * Q.length)
-      dost = Q.slice(num,num+1)[0]
-      Q.splice(num,1)
-      $(report).text(dost)
-      $(report).text('ERROR') unless dost
+      dost = Q.rand()
+      if dost
+        $(report).text(dost)
+      else
+        $(report).text('ERROR')
       $(body).addClass 'report'
-
-
-  update = () ->
-
-      inbar.focus() unless 'ontouchstart' in window
-
-      setTimeout (-> update()), 1500
-
-  update()

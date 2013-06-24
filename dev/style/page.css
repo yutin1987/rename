@@ -264,15 +264,24 @@ body {
 /* line 35, ../sass/page.sass */
 #navi .navi-player {
   position: absolute;
-  right: 5px;
-  top: 4px;
+  right: 3px;
+  top: 3px;
   padding: 3px;
   background: white;
   border: 3px #888888 solid;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
   cursor: pointer;
+  -webkit-border-radius: 36px;
+  -moz-border-radius: 36px;
+  -ms-border-radius: 36px;
+  -o-border-radius: 36px;
+  border-radius: 36px;
 }
 
-/* line 44, ../sass/page.sass */
+/* line 49, ../sass/page.sass */
 #player {
   position: fixed;
   right: -300px;
@@ -283,34 +292,34 @@ body {
   background: white;
   overflow: scroll;
 }
-/* line 53, ../sass/page.sass */
+/* line 58, ../sass/page.sass */
 .display-player #player {
   right: 0px;
 }
-/* line 55, ../sass/page.sass */
+/* line 60, ../sass/page.sass */
 #player form {
   margin-top: 42px;
 }
-/* line 57, ../sass/page.sass */
+/* line 62, ../sass/page.sass */
 #player form .name {
   width: 180px;
 }
-/* line 59, ../sass/page.sass */
+/* line 64, ../sass/page.sass */
 #player .del {
   width: 98px;
   text-align: right;
 }
-/* line 62, ../sass/page.sass */
+/* line 67, ../sass/page.sass */
 #player .name {
   text-align: left;
 }
 
-/* line 68, ../sass/page.sass */
+/* line 73, ../sass/page.sass */
 #view .view.view-boy .target {
   color: #4fa950;
   border-bottom: 3px #4fa950 solid;
 }
-/* line 72, ../sass/page.sass */
+/* line 77, ../sass/page.sass */
 .display-boy #view .view.view-boy .mask-1,
 .display-boy #view .view.view-boy .mask-2 {
   -webkit-transition: top 0.3s ease-in-out;
@@ -319,15 +328,15 @@ body {
   -o-transition: top 0.3s ease-in-out 0s;
   transition: top 0.3s ease-in-out 0s;
 }
-/* line 75, ../sass/page.sass */
+/* line 80, ../sass/page.sass */
 .display-boy #view .view.view-boy .mask-1 {
   top: 0%;
 }
-/* line 77, ../sass/page.sass */
+/* line 82, ../sass/page.sass */
 .display-boy #view .view.view-boy .mask-2 {
   top: 50%;
 }
-/* line 79, ../sass/page.sass */
+/* line 84, ../sass/page.sass */
 .display-boy #view .view.view-boy .target {
   left: 5%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -338,7 +347,7 @@ body {
   -o-transition: opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s;
 }
-/* line 83, ../sass/page.sass */
+/* line 88, ../sass/page.sass */
 .display-boy #view .view.view-boy .assignment {
   top: 10%;
   -webkit-transform: scale(1, 1);
@@ -354,12 +363,12 @@ body {
   -o-animation: assignment-show 0.5s ease-in-out 0s 1;
   animation: assignment-show 0.5s ease-in-out 0s 1;
 }
-/* line 89, ../sass/page.sass */
+/* line 94, ../sass/page.sass */
 #view .view.view-girl .target {
   color: #ce483d;
   border-bottom: 3px #ce483d solid;
 }
-/* line 93, ../sass/page.sass */
+/* line 98, ../sass/page.sass */
 .display-girl #view .view.view-girl .mask-1,
 .display-girl #view .view.view-girl .mask-2 {
   -webkit-transition: top 0.3s ease-in-out;
@@ -368,15 +377,15 @@ body {
   -o-transition: top 0.3s ease-in-out 0s;
   transition: top 0.3s ease-in-out 0s;
 }
-/* line 96, ../sass/page.sass */
+/* line 101, ../sass/page.sass */
 .display-girl #view .view.view-girl .mask-1 {
   top: 0%;
 }
-/* line 98, ../sass/page.sass */
+/* line 103, ../sass/page.sass */
 .display-girl #view .view.view-girl .mask-2 {
   top: 50%;
 }
-/* line 100, ../sass/page.sass */
+/* line 105, ../sass/page.sass */
 .display-girl #view .view.view-girl .target {
   left: 5%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -387,7 +396,7 @@ body {
   -o-transition: opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s;
   transition: opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s;
 }
-/* line 104, ../sass/page.sass */
+/* line 109, ../sass/page.sass */
 .display-girl #view .view.view-girl .assignment {
   top: 10%;
   -webkit-transform: scale(1, 1);
@@ -403,15 +412,15 @@ body {
   -o-animation: assignment-show 0.5s ease-in-out 0s 1;
   animation: assignment-show 0.5s ease-in-out 0s 1;
 }
-/* line 109, ../sass/page.sass */
+/* line 114, ../sass/page.sass */
 #view .mask-1 {
   top: -50%;
 }
-/* line 111, ../sass/page.sass */
+/* line 116, ../sass/page.sass */
 #view .mask-2 {
   top: 100%;
 }
-/* line 113, ../sass/page.sass */
+/* line 118, ../sass/page.sass */
 #view .mask-1,
 #view .mask-2 {
   z-index: 990;
@@ -426,7 +435,7 @@ body {
   -o-transition: top 0.3s ease-in-out 0.2s;
   transition: top 0.3s ease-in-out 0.2s;
 }
-/* line 122, ../sass/page.sass */
+/* line 127, ../sass/page.sass */
 #view .target {
   z-index: 991;
   position: absolute;
@@ -442,7 +451,7 @@ body {
   -o-transition: opacity 0.2s ease-in-out 0s, left 0.3s ease-in-out 0s;
   transition: opacity 0.2s ease-in-out 0s, left 0.3s ease-in-out 0s;
 }
-/* line 132, ../sass/page.sass */
+/* line 137, ../sass/page.sass */
 #view .assignment {
   z-index: 992;
   position: absolute;
@@ -463,14 +472,14 @@ body {
   animation: assignment-hide 0.5s ease-in-out 0s 1;
 }
 
-/* line 147, ../sass/page.sass */
+/* line 152, ../sass/page.sass */
 #button .btn {
   position: fixed;
   left: 0px;
   width: 100%;
   height: 25%;
 }
-/* line 152, ../sass/page.sass */
+/* line 157, ../sass/page.sass */
 #button .btn span {
   display: block;
   position: absolute;
@@ -479,12 +488,12 @@ body {
   margin-top: -10px;
   font-size: 100px;
 }
-/* line 159, ../sass/page.sass */
+/* line 164, ../sass/page.sass */
 #button .btn.btn-boy {
   top: 30%;
   background: #4fa950;
 }
-/* line 162, ../sass/page.sass */
+/* line 167, ../sass/page.sass */
 #button .btn.btn-girl {
   top: 60%;
   background: #ce483d;

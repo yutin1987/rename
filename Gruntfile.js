@@ -38,25 +38,37 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         options:{
-          beautify: true
+          beautify: false,
+          report: false,
+          mangle: {
+            except: ['$scope','$cookieStore']
+          }
         },
         files: {
-          './script/page.js': ['./dev/script/helper*.js','./dev/script/page.js']
+          './script/page.js': ['./dev/script/helper*.js','./dev/script/page.js'],
+        }
+      }
+    },
+    cssmin: {
+      combine: {
+        files: {
+          './style/page.css': ['./dev/style/reset.css','./dev/style/bootstrap.css','./dev/style/page.css']
         }
       }
     },
     watch: {
       files: ['**/*.jade','**/*.coffee','**/*.sass'],
-      tasks: ['jade','coffee','uglify','compass']
+      tasks: ['jade','coffee','uglify','compass','cssmin']
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['jade','coffee','uglify','compass','watch']);
+  grunt.registerTask('default', ['jade','coffee','uglify','compass','cssmin','watch']);
 
 };

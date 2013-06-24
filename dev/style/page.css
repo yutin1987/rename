@@ -1,0 +1,71 @@
+/* line 1, ../sass/page.sass */
+body {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACRQTFRFcHBwXFxcTU1NLCwsMTExT09PNzc3R0dHX19fPz8/VVVVHx8f3V7P6wAACTJJREFUeNrcXeua2joMNC3bJuH93/dwwi6yxjOKjROI6x98LLmgdcayRjfSfB+35T5u033c1j/hs/WdHbCj67vrfTxe2BXrOzsFvsMug7vYKc8rbNzS/OfP/dZ//96/7uvrfvj/P+Gz9Z0dsKPru+vv39fHC7tifWenwHfYZXAXO+XnChvDCj0EPEDo2wgDhZbTA+/SfdhcPgacZ3exF5gyf3TZPuX7Lii0AiK8S5dLeqLWxkQXgL0AON3RdcSn2F3+AaHb4QFCvwgPE7odHu2rAoR+cZjQLyxE00RyWYGeugv9KxOaqbfnUtU3hZmOTy6Efup8QLJ9BjsCzDTbSCZ11KE2x3Qswb8h9Cvw+NqChzrql1qmpzfgAQbTIQtx6l2m8UigcK4/A9WW/clUnngYuQJj5gnMNDuwvrs8j64vCVT7HZLruOIGYX+yzUXAPt8qmCG4eEyzA3aFvQwqNMDDhJbwcIPDw+vpbnhMAA/AuAl94pHQpCczDXMkVRRMiqQXbL9sohepJE8FpgGNcjMA+Ekix7aeJiI3qNDlI0E9vTs8yH7ZBo8PrKPu/TIx06F9fuFoTM4nv5savWDTzZRkYkZaO5LhaOwGmfzGZESOAZttR4MK/QF4+N30BXjcBhwJJip0XKIqM51kKgrs9TZ6MU0Xu8FNgiABJCMf4Iybhml/2wyAGbUSOfPbzTe53AYVem94gNCN8HBCS3gc7OB8/QZzvWm66p/nZwvjzOwRZPPmhYZnyDQl2C0zuRY82on5GX8+s7EoVsWMOSe0Xy1sTwILcSbXQuxgUKElPEDot8Hjqac1PDbdmvW+zX0WYvWOSM0EL7QyO5bYwSmd3j30IgGiHNSc0NzAY0ed0Cq80EPkBhW6Bx7i6CyNnp3g0bMQl+ZluudCBLPj8Y7MNFgmJnRFuMkbrl30IgvJlUyrwDTYgJnQ24E9ZwPOXURuUKElPLzBROHxPFoND6/AX4XHZyLzfVtlMpNA2utg6zPTgbmxGL2Qdmcl+/xWeWZ8SWYErIoZacxhyIicNOHqiNz3eYMK/V54KLuzDR5DOmvsPwFvFSPOzFbwrBIdX4xesJcKepGxccPMFOadwOYyef+hiNpNlMixlwoil/k9xhTa4BEmy7TBgwQo9oTHIVH4owP6mTbxMw0qCoKmTPmxAAUzSuwrpaolzzqzg/zmkmMaNgMIT7Nthvn6mflnXyk3tXJV5RbnoEK7zSbT02DgtMHD6+l+eIDQ7zAluwcKzWaLOYvDIOwscwEZvfBrS9ILknn4FJrgkrnlo3B34fUHZwUQOQdTSeQWkuM5ttAxPPyzp/AgoYoaeMTOiRgen6J9TY4eFLo/CR4J9mUC78yGS43QiwWJBgq9Q7mBc2X8ci6KyKnxI3RB5HJnCnOG7i/01zuE3qNGYmbG7AY8nihAeHgHIYu0nY8jVqzQFCfBs0Q0nQRfWvNzRTYEqDwTWrHPPDbOaglYRVFUbjDTXSfOO4HNJROaE7lhhT4OHt5vVw0PW28SHmf3kNKFuFEjUU6j9ueAAptV/gQjAbX04vEIpq1yAwDsVh2R41I8U4XRrVoi9/B7jCl0Ezy2i5/8s6fZV/3wOJMT5tWAPmgn9CcTJwxLymU58bUpwMyCgYlPZYrITE04lvkM1qCMZTclWzNbESA+qNAxPMpo1CQz1CJ4XHaFxxDOGmmaYr6Dy5OZcVJkxBaUGkyUVLCMg8uTk8wscQdmhJ+MjcP2AZCUWxnzdsiTBxVaZUt53HB4kHyPt8CjJy/tY5k1tNfA0/oG1YMuZ0KcmWEhi9CYAiA0BK3hRLs6PHkOKPmpcO4XLgpmwslyP7aWSsJXGJaDCt0DD+J20/AgJaxMASA8iDXctRC7zdqK72WXpYoEUZYcEesuVufCpgy+l7IDFvytyLVkaSjxLsEqihg4UWjOw8ow++FC/zpC6O0E0S54XPKliwq3Bh4sdeRMvWheKAyWHBxUnsxogEcQ0wumamvpRarwdsDmInNHAOwxkWOb2lRJ5AYV+qPwUCV1G/AYtx5RZjlIpQZ2hnxU0rUlPWLyzlmdC3PLxxkjEKuLF4V0Ikrfo7xzVlE0ptAjwmPchcjMCZnex15ITGdhFKGFXtCk4cw0ZYabTKRkL2X0LI9ls9zNTSLH07Mz03Q4oQ+BBwi9NzzekZJ2kLOG+LIgQ4JVZWrLxAsNCqybXiTpNYRcFFb/GtmATmi/VXQTuUGFboKHj2Z8DB6HxOiPXogsY152yoJ0NtbBJK4abaEXk9SKidUmyJ5kkBnGesXE9bkNRC73dgDYBxW6CR7en6PhQWoZ2+DhPXgIj3Man3HmQGKN6q5u6NY/cc/ZHnqhyjeWLHxRJprYuOomS3F33x4iJyohftLIxhSawQOE/gA8WPlGnPQNQp8uCTUxnzAILftJgunAmrIzc4I5w2roBasoKvuE/gitOneCkcba3zPDjbkd64jc2EJ/AB7ElV7JPoOk74MXYnfUMjHTgc00y+pl9oj5rCW9kDMdP6osYsuMNIZplj/NLD+LDkgiJzEdL4osNj6m0Awe3mC6xPAg8fij4fGB3O6dFmJsHGT/ovd+8TKosmt6HKdlnUlCehH3YSp8+OBnjCuKoHhPRsRZD5iIyA0rdDc8ZN6UdyH4y6jBVA2Pj9YzdccRJ9mAhLlJ4wIYlmoorf52epHAzcBavbAYdVxqxJI6Jb9qJ3KDCu19I3vCw0e39oTHmaoq2sIX8ldBIAle9uVic6RaHtDfFpH0gkVMkkzJYuUGsgMaQ6NoLsF/xUUSORZ8GFToPI9sq0ZCdvWrhof6ZSINDxIxSe/d5JaX+6TOvHlURV472+TiijXZgFFGhUWf1LzZV2oqN2D7RVwbKHsZyvi7+E2lvK3aoEI3wYNscm3w8Hr6UgEPb8IOnFnDOo7I7qNhjcRGfVRML2iDDPX4Eus/Jht5zkG5wVapUUzkRK8JvlAGFZrBQ3UfrYZHZT/c7QYZHB6HVCG2b3xNV9BkQha3B35Mfs2NtrsA5SfpheoKTelFEj/sUITAwRMxk9b0rHMEbDOSyC2qOzcjcqmskRhB6LJGgsbt2+BBYvkb8GA95SU8xs01jZPg5c/UnbRCn6VyTmev0D+r0O+Bxzsr9M85/hNgAEnpU+tGF3DmAAAAAElFTkSuQmCC');
+}
+
+/* line 5, ../sass/page.sass */
+#navi .brand {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+/* line 9, ../sass/page.sass */
+#navi .navi-player {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  padding: 3px;
+  background: white;
+  border: 3px #888888 solid;
+  cursor: pointer;
+}
+
+/* line 18, ../sass/page.sass */
+#player {
+  position: fixed;
+  right: -300px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  z-index: 99;
+  background: white;
+}
+/* line 26, ../sass/page.sass */
+.display-player #player {
+  right: 0px;
+}
+/* line 28, ../sass/page.sass */
+#player form {
+  margin-top: 42px;
+}
+/* line 30, ../sass/page.sass */
+#player form .name {
+  width: 180px;
+}
+
+/* line 34, ../sass/page.sass */
+#button .btn {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  height: 25%;
+}
+/* line 39, ../sass/page.sass */
+#button .btn span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -10px;
+  font-size: 100px;
+}
+/* line 46, ../sass/page.sass */
+#button .btn-boy {
+  top: 30%;
+  background: #4fa950;
+}
+/* line 49, ../sass/page.sass */
+#button .btn-girl {
+  top: 60%;
+  background: #ce483d;
+}

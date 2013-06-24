@@ -1,20 +1,45 @@
 !!! 5
-html(lang="en")
+html(ng-app="myApp")
   head
     meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no')
     meta(name='description', content='')
     meta(name='author', content='')
     title 
-    script(type='text/javascript', src='./script/jquery.js')
+    script(type='text/javascript', src='./script/fw.js')
       
     link(rel='stylesheet', type='text/css', href='./style/page.css')
     script(type='text/javascript', src='./script/page.js')
     
   body#viewport
-    #keyin
-      .wrap
-      .num ?
-    table#report
-      tr
-        td ERROR
+    #navi.navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        a.brand Truth or Dare
+        .navi.navi-player 玩家
+    div(ng-controller="PlayerCtrl")
+      div#player
+        form
+          .input-append
+            input.name(type="text",ng-model="playerName",placeholder="player name")
+            input.btn.btn-primary(type="button",ng-click="addBoy()",value="Boy")
+            input.btn.btn-primary(type="button",ng-click="addGirl()",value="Girl")
+        label
+          span {{boys.length}} 個男人
+          a(ng-click="delBoy()") [ 刪除選取 ]
+        ul
+          li(ng-repeat="boy in boys")
+            input(type="checkbox",ng-model="boy.check")
+            span {{boy.name}}
+        label
+          span {{girls.length}} 個女人
+          a(ng-click="delGirl()") [ 刪除選取 ]
+        ul
+          li(ng-repeat="girl in girls")
+            input(type="checkbox",ng-model="girl.check")
+            span {{girl.name}}
+      div#view
+        div.view.view-boy
+        div.view.view-girl
+      div#button
+        .btn.btn-boy: span BOY
+        .btn.btn-girl: span GIRL

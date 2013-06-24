@@ -79,7 +79,7 @@ PlayerCtrl = function($scope, $cookieStore) {
       return player.rand().name;
     });
   };
-  return $scope.getQ4Girl = function() {
+  $scope.getQ4Girl = function() {
     var player;
 
     $scope.display = 'display-girl';
@@ -87,5 +87,8 @@ PlayerCtrl = function($scope, $cookieStore) {
     return $scope.assignment = Q.rand().replace(/{player}/g, function() {
       return player.rand().name;
     });
+  };
+  return $scope.back = function() {
+    return $scope.display = '';
   };
 };

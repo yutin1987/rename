@@ -42,8 +42,17 @@ body {
 #player form .name {
   width: 180px;
 }
+/* line 32, ../sass/page.sass */
+#player .del {
+  width: 98px;
+  text-align: right;
+}
+/* line 35, ../sass/page.sass */
+#player .name {
+  text-align: left;
+}
 
-/* line 34, ../sass/page.sass */
+/* line 39, ../sass/page.sass */
 #view .view {
   position: fixed;
   width: 100%;
@@ -51,33 +60,33 @@ body {
   z-index: 999;
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 40, ../sass/page.sass */
+/* line 45, ../sass/page.sass */
 #view .view.view-boy {
   display: none;
 }
-/* line 42, ../sass/page.sass */
+/* line 47, ../sass/page.sass */
 .display-boy #view .view.view-boy {
   display: block;
 }
-/* line 44, ../sass/page.sass */
+/* line 49, ../sass/page.sass */
 #view .view.view-boy .target {
   color: #4fa950;
   border-bottom: 3px #4fa950 solid;
 }
-/* line 47, ../sass/page.sass */
+/* line 52, ../sass/page.sass */
 #view .view.view-girl {
   display: none;
 }
-/* line 49, ../sass/page.sass */
+/* line 54, ../sass/page.sass */
 .display-girl #view .view.view-girl {
   display: block;
 }
-/* line 51, ../sass/page.sass */
+/* line 56, ../sass/page.sass */
 #view .view.view-girl .target {
   color: #ce483d;
   border-bottom: 3px #ce483d solid;
 }
-/* line 54, ../sass/page.sass */
+/* line 59, ../sass/page.sass */
 #view .target {
   position: absolute;
   top: 20%;
@@ -87,7 +96,7 @@ body {
   height: 40px;
   font-size: 36px;
 }
-/* line 62, ../sass/page.sass */
+/* line 67, ../sass/page.sass */
 #view .assignment {
   position: absolute;
   top: 50%;
@@ -99,14 +108,14 @@ body {
   color: white;
 }
 
-/* line 73, ../sass/page.sass */
+/* line 78, ../sass/page.sass */
 #button .btn {
   position: fixed;
   left: 0px;
   width: 100%;
   height: 25%;
 }
-/* line 78, ../sass/page.sass */
+/* line 83, ../sass/page.sass */
 #button .btn span {
   display: block;
   position: absolute;
@@ -115,12 +124,12 @@ body {
   margin-top: -10px;
   font-size: 100px;
 }
-/* line 85, ../sass/page.sass */
+/* line 90, ../sass/page.sass */
 #button .btn.btn-boy {
   top: 30%;
   background: #4fa950;
 }
-/* line 88, ../sass/page.sass */
+/* line 93, ../sass/page.sass */
 #button .btn.btn-girl {
   top: 60%;
   background: #ce483d;

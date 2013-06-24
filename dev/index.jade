@@ -23,25 +23,29 @@ html(ng-app="myApp")
             input.name(type="text",ng-model="playerName",placeholder="player name")
             input.btn.btn-primary(type="button",ng-click="addBoy()",value="Boy")
             input.btn.btn-primary(type="button",ng-click="addGirl()",value="Girl")
-        label
-          span {{boys.length}} 個男人
-          a(ng-click="delBoy()") [ 刪除選取 ]
-        ul
-          li(ng-repeat="boy in boys")
-            input(type="checkbox",ng-model="boy.check")
-            span {{boy.name}}
-        label
-          span {{girls.length}} 個女人
-          a(ng-click="delGirl()") [ 刪除選取 ]
-        ul
-          li(ng-repeat="girl in girls")
-            input(type="checkbox",ng-model="girl.check")
-            span {{girl.name}}
+        table.table.table-condensed
+          thead
+            tr
+              th.del: a(ng-click="delBoy()") [ 刪除選取 ]
+              th.name {{boys.length}} 個男人
+          tbody
+            tr(ng-repeat="boy in boys")
+              td.del: input(type="checkbox",ng-model="boy.check")
+              td.name {{boy.name}}
+        table.table.table-condensed
+          thead
+            tr
+              th.del: a(ng-click="delGirl()") [ 刪除選取 ]
+              th.name {{girls.length}} 個女人
+          tbody
+            tr(ng-repeat="girl in girls")
+              td.del: input(type="checkbox",ng-model="girl.check")
+              td.name {{girl.name}}
       div#view
-        div.view.view-boy
+        div.view.view-boy(ng-click="back()")
           .target &#62; BOY
           .assignment {{assignment}}
-        div.view.view-girl
+        div.view.view-girl(ng-click="back()")
           .target &#62; GIRL
           .assignment {{assignment}}
       div#button

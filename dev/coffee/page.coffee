@@ -111,3 +111,6 @@ PlayerCtrl = ($scope,$cookieStore) ->
     $scope.display = 'display-girl'
     player = $scope.boys
     $scope.assignment = Q.rand().replace /{player}/g, -> player.rand().name
+
+  $scope.back = () ->
+    $scope.display = ''

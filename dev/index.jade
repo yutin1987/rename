@@ -11,12 +11,12 @@ html(ng-app="myApp")
     link(rel='stylesheet', type='text/css', href='./style/page.css')
     script(type='text/javascript', src='./script/page.js')
     
-  body#viewport
+  body#viewport(class="{{display}}",ng-controller="PlayerCtrl")
     #navi.navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         a.brand Truth or Dare
-        .navi.navi-player 玩家
-    div(ng-controller="PlayerCtrl")
+        .navi.navi-player(ng-click="viewPlayer()") 玩家
+    div
       div#player
         form
           .input-append
@@ -39,7 +39,11 @@ html(ng-app="myApp")
             span {{girl.name}}
       div#view
         div.view.view-boy
+          .target &#62; BOY
+          .assignment {{assignment}}
         div.view.view-girl
+          .target &#62; GIRL
+          .assignment {{assignment}}
       div#button
-        .btn.btn-boy: span BOY
-        .btn.btn-girl: span GIRL
+        .btn.btn-boy(ng-click="getQ4Boy()"): span BOY
+        .btn.btn-girl(ng-click="getQ4Girl()"): span GIRL

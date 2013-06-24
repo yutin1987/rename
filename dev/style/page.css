@@ -60,32 +60,53 @@ body {
   display: block;
 }
 /* line 44, ../sass/page.sass */
+#view .view.view-boy .target {
+  color: #4fa950;
+  border-bottom: 3px #4fa950 solid;
+}
+/* line 47, ../sass/page.sass */
 #view .view.view-girl {
   display: none;
 }
-/* line 46, ../sass/page.sass */
+/* line 49, ../sass/page.sass */
 .display-girl #view .view.view-girl {
   display: block;
 }
-/* line 48, ../sass/page.sass */
+/* line 51, ../sass/page.sass */
+#view .view.view-girl .target {
+  color: #ce483d;
+  border-bottom: 3px #ce483d solid;
+}
+/* line 54, ../sass/page.sass */
 #view .target {
   position: absolute;
-  width: 100%;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  text-align: right;
+  height: 40px;
+  font-size: 36px;
 }
-/* line 51, ../sass/page.sass */
+/* line 62, ../sass/page.sass */
 #view .assignment {
   position: absolute;
-  width: 100%;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+  font-size: 68px;
+  line-height: 68px;
+  color: white;
 }
 
-/* line 56, ../sass/page.sass */
+/* line 73, ../sass/page.sass */
 #button .btn {
   position: fixed;
   left: 0px;
   width: 100%;
   height: 25%;
 }
-/* line 61, ../sass/page.sass */
+/* line 78, ../sass/page.sass */
 #button .btn span {
   display: block;
   position: absolute;
@@ -94,12 +115,12 @@ body {
   margin-top: -10px;
   font-size: 100px;
 }
-/* line 68, ../sass/page.sass */
+/* line 85, ../sass/page.sass */
 #button .btn.btn-boy {
   top: 30%;
   background: #4fa950;
 }
-/* line 71, ../sass/page.sass */
+/* line 88, ../sass/page.sass */
 #button .btn.btn-girl {
   top: 60%;
   background: #ce483d;

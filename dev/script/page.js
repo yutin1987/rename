@@ -5,6 +5,9 @@ Q = ['與{player}對他深情款款的告白', '自己脫去一件衣服並與{p
 Array.prototype.rand = function() {
   var num;
 
+  if (this.length < 1) {
+    return null;
+  }
   num = Math.floor(Math.random() * this.length);
   return this.splice(num, 1)[0];
 };
@@ -76,7 +79,7 @@ PlayerCtrl = function($scope, $cookieStore) {
     $scope.display = 'display-boy';
     player = $scope.girls;
     return $scope.assignment = Q.rand().replace(/{player}/g, function() {
-      return player.rand().name;
+      return player.rand().name || 'NoName';
     });
   };
   $scope.getQ4Girl = function() {
@@ -85,7 +88,7 @@ PlayerCtrl = function($scope, $cookieStore) {
     $scope.display = 'display-girl';
     player = $scope.boys;
     return $scope.assignment = Q.rand().replace(/{player}/g, function() {
-      return player.rand().name;
+      return player.rand().name || 'NoName';
     });
   };
   return $scope.back = function() {

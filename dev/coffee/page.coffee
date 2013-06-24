@@ -59,8 +59,9 @@ Q = [
 ]
 
 Array.prototype.rand = () ->
-    num = Math.floor(Math.random() * this.length)
-    return this.splice(num,1)[0]
+  return null if this.length < 1
+  num = Math.floor(Math.random() * this.length)
+  return this.splice(num,1)[0]
 
 QTemp = []
 QTemp.push Q.rand() for i in [1..Q.length]
@@ -105,12 +106,12 @@ PlayerCtrl = ($scope,$cookieStore) ->
   $scope.getQ4Boy = () ->
     $scope.display = 'display-boy'
     player = $scope.girls
-    $scope.assignment = Q.rand().replace /{player}/g, -> player.rand().name
+    $scope.assignment = Q.rand().replace /{player}/g, -> player.rand().name || 'NoName'
 
   $scope.getQ4Girl = () ->
     $scope.display = 'display-girl'
     player = $scope.boys
-    $scope.assignment = Q.rand().replace /{player}/g, -> player.rand().name
+    $scope.assignment = Q.rand().replace /{player}/g, -> player.rand().name || 'NoName'
 
   $scope.back = () ->
     $scope.display = ''

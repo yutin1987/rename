@@ -1,3 +1,29 @@
+@import "compass"
+@import "../sass_lib/animation.sass"
+
++keyframes(assignment-show)
+  0%
+    +opacity(0)
+  40%
+    +opacity(0)
+    +scale(20)
+  100%
+    +opacity(1)
+    +scale(1)
+
++keyframes(assignment-hide)
+  0%
+    top: 10%
+    +scale(1)
+    +opacity(1)
+  60%
+    top: 10%
+    +scale(20)
+    +opacity(0)
+  100%
+    top: -100%
+    +opacity(0)
+
 body
   background: inline-image('bg.png')
 
@@ -23,6 +49,7 @@ body
   height: 100%
   z-index: 99
   background: #FFF
+  overflow: scroll
   .display-player &
     right: 0px
   form
@@ -37,42 +64,84 @@ body
 
 #view
   .view
-    position: fixed
-    width: 100%
-    height: 100%
-    z-index: 999
-    background: rgba(0,0,0,0.8)
     &.view-boy
-      display: none
-      .display-boy &
-        display: block
       .target
         color: #4fa950
         border-bottom: 3px #4fa950 solid
+      .display-boy &
+        .mask-1,
+        .mask-2
+          +single-transition(top, 0.3s, ease-in-out, 0s)
+        .mask-1
+          top: 0%
+        .mask-2
+          top: 50%
+        .target
+          left: 5%
+          +opacity(1)
+          +transition(opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s)
+        .assignment
+          top: 10%
+          +scale(1)
+          +opacity(1)
+          +animation(assignment-show 0.5s ease-in-out 0s 1)
     &.view-girl
-      display: none
-      .display-girl &
-        display: block   
       .target
         color: #ce483d
         border-bottom: 3px #ce483d solid
+      .display-girl &
+        .mask-1,
+        .mask-2
+          +single-transition(top, 0.3s, ease-in-out, 0s)
+        .mask-1
+          top: 0%
+        .mask-2
+          top: 50%
+        .target
+          left: 5%
+          +opacity(1)
+          +transition(opacity 0.2s ease-in-out 0.2s, left 0.3s ease-in-out 0.2s)
+        .assignment
+          top: 10%
+          +scale(1)
+          +opacity(1)
+          +animation(assignment-show 0.5s ease-in-out 0s 1)
+  .mask-1
+    top: -50%
+  .mask-2
+    top: 100%
+  .mask-1,
+  .mask-2
+    z-index: 990
+    position: fixed
+    width: 100%
+    height: 50%
+    left: 0px
+    background: rgba(0,0,0,0.8)
+    +single-transition(top, 0.3s, ease-in-out, 0.2s)
   .target
+    z-index: 991
     position: absolute
-    top: 20%
-    left: 5%
+    top: 10%
+    left: -100%
     width: 90%
     text-align: right
     height: 40px
     font-size: 36px
+    +transition(opacity 0.2s ease-in-out 0s, left 0.3s ease-in-out 0s)
   .assignment
+    z-index: 992
     position: absolute
-    top: 50%
+    top: -100%
     left: 5%
     width: 90%
+    margin-top: 60px
     text-align: center
-    font-size: 68px
-    line-height: 68px
+    font-size: 96px
+    line-height: 108px
     color: #FFF
+    +opacity(0)
+    +animation(assignment-hide 0.5s ease-in-out 0s 1)
 
 #button
   .btn

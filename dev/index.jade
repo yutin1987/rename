@@ -2,6 +2,7 @@
 html(ng-app="myApp")
   head
     meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+    meta(name="apple-mobile-web-app-capable",content="yes")
     meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no')
     meta(name='description', content='')
     meta(name='author', content='')
@@ -43,9 +44,13 @@ html(ng-app="myApp")
               td.name {{girl.name}}
       div#view
         div.view.view-boy(ng-click="back()")
+          .mask-1
+          .mask-2
           .target &#62; BOY
           .assignment {{assignment}}
         div.view.view-girl(ng-click="back()")
+          .mask-1
+          .mask-2
           .target &#62; GIRL
           .assignment {{assignment}}
       div#button

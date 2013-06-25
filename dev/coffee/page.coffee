@@ -59,7 +59,7 @@ Q = [
 ]
 
 Array.prototype.rand = () ->
-  return null if this.length < 1
+  return '' if this.length < 1
   num = Math.floor(Math.random() * this.length)
   return this.splice(num,1)[0]
 
@@ -109,13 +109,13 @@ PlayerCtrl = ($scope,$cookieStore) ->
     $scope.display = 'display-boy'
     player = angular.copy $scope.girls
     resetQ() if QItem.length < 1
-    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="girl">' + (player.rand().name || 'NoName') + '</span>'
+    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="girl">' + (player.rand().name || 'GIRL') + '</span>'
 
   $scope.getQ4Girl = () ->
     $scope.display = 'display-girl'
     player = angular.copy $scope.boys
     resetQ() if QItem.length < 1
-    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="boy">' + (player.rand().name || 'NoName') + '</span>'
+    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="boy">' + (player.rand().name || 'BOY') + '</span>'
 
   $scope.back = () ->
     $scope.display = ''

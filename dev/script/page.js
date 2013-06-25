@@ -6,7 +6,7 @@ Array.prototype.rand = function() {
   var num;
 
   if (this.length < 1) {
-    return null;
+    return '';
   }
   num = Math.floor(Math.random() * this.length);
   return this.splice(num, 1)[0];
@@ -84,7 +84,7 @@ PlayerCtrl = function($scope, $cookieStore) {
       resetQ();
     }
     return $scope.assignment = QItem.rand().replace(/{player}/g, function() {
-      return '<span class="girl">' + (player.rand().name || 'NoName') + '</span>';
+      return '<span class="girl">' + (player.rand().name || 'GIRL') + '</span>';
     });
   };
   $scope.getQ4Girl = function() {
@@ -96,7 +96,7 @@ PlayerCtrl = function($scope, $cookieStore) {
       resetQ();
     }
     return $scope.assignment = QItem.rand().replace(/{player}/g, function() {
-      return '<span class="boy">' + (player.rand().name || 'NoName') + '</span>';
+      return '<span class="boy">' + (player.rand().name || 'BOY') + '</span>';
     });
   };
   return $scope.back = function() {

@@ -65,10 +65,12 @@ Array.prototype.rand = () ->
 
 QItem = []
 
+resetSum = 0
 resetQ = () ->
   QTemp = Q
   QItem.push QTemp.rand() for i in [1..QTemp.length]
   QItem.sort () -> 0.5 - Math.random()
+  ga('send', 'event', 'Assignment', 'reset', null, ++resetSum)
 
 angular.module('myApp',['ngCookies'])
 PlayerCtrl = ($scope,$cookieStore) ->
@@ -81,41 +83,59 @@ PlayerCtrl = ($scope,$cookieStore) ->
     $scope.boys.push {name:$scope.playerName}
     $cookieStore.put('boys', $scope.boys)
     $scope.playerName = ''
+    ga('send', 'event', 'Player', 'Add', 'Boy', $scope.playerName)
 
   $scope.addGirl = ->
     $scope.girls.push {name:$scope.playerName}
     $cookieStore.put('girls', $scope.girls)
     $scope.playerName = ''
+    ga('send', 'event', 'Player', 'Add', 'Girl', $scope.playerName)
 
   $scope.viewPlayer = ->
     $scope.display = if $scope.display is 'display-player' then '' else 'display-player'
+    ga('send', 'event', 'Player', 'View')
 
   $scope.delBoy = () ->
     boys = $scope.boys
     $scope.boys = []
+    num = 0
     angular.forEach boys, (boy) ->
-      $scope.boys.push boy unless boy.check
+      if boy.check
+        num++
+        ga('send', 'event', 'Player', 'Del', 'Boy', boy.name)
+      else
+        $scope.boys.push boy
     $cookieStore.put('boys', $scope.boys)
-    $scope.playerName = ''
+    ga('send', 'event', 'Player', 'Del', 'BoySum', num)
 
   $scope.delGirl = () ->
     girls = $scope.girls
     $scope.girls = []
+    num = 0
     angular.forEach girls, (girl) ->
-      $scope.girls.push girl unless girl.check
+      if girl.check
+        num++
+        ga('send', 'event', 'Player', 'Del', 'Girl', girl.name)
+      else
+        $scope.girls.push girl
     $cookieStore.put('girls', $scope.girls)
+    ga('send', 'event', 'Player', 'Del', 'GirlSum', num)
 
   $scope.getQ4Boy = () ->
     $scope.display = 'display-boy'
     player = angular.copy $scope.girls
     resetQ() if QItem.length < 1
-    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="girl">' + (player.rand().name || 'GIRL') + '</span>'
+    assign = QItem.rand()
+    $scope.assignment = assign.replace /{player}/g, -> '<span class="girl">' + (player.rand().name || 'GIRL') + '</span>'
+    ga('send', 'event', 'Assignment', 'assign', 'Boy', assign)
 
   $scope.getQ4Girl = () ->
     $scope.display = 'display-girl'
     player = angular.copy $scope.boys
     resetQ() if QItem.length < 1
-    $scope.assignment = QItem.rand().replace /{player}/g, -> '<span class="boy">' + (player.rand().name || 'BOY') + '</span>'
+    assign = QItem.rand()
+    $scope.assignment = assign.replace /{player}/g, -> '<span class="boy">' + (player.rand().name || 'BOY') + '</span>'
+    ga('send', 'event', 'Assignment', 'assign', 'Girl', assign)
 
   $scope.back = () ->
     $scope.display = ''

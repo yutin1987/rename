@@ -543,36 +543,43 @@ body {
   width: 50%;
   height: 65%;
   display: table-cell;
-  font-size: 100px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 100%;
   padding: 0px;
 }
-/* line 181, ../sass/page.sass */
+/* line 177, ../sass/page.sass */
+#button .btn span {
+  display: block;
+  width: 100%;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+}
+/* line 186, ../sass/page.sass */
 #button .btn.btn-boy {
   left: 0%;
   background: #4fa950;
 }
-/* line 184, ../sass/page.sass */
+/* line 189, ../sass/page.sass */
 #button .btn.btn-girl {
   left: 50%;
   background: #ce483d;
 }
 
 @media all and (orientation: portrait) {
-  /* line 190, ../sass/page.sass */
+  /* line 195, ../sass/page.sass */
   #viewport #button .btn {
     left: 0%;
     width: 100%;
     height: 25%;
     padding: 0px;
   }
-  /* line 195, ../sass/page.sass */
+  /* line 200, ../sass/page.sass */
   #viewport #button .btn.btn-boy {
     top: 30%;
   }
-  /* line 197, ../sass/page.sass */
+  /* line 202, ../sass/page.sass */
   #viewport #button .btn.btn-girl {
     top: 60%;
   }

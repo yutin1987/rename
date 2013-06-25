@@ -564,18 +564,18 @@ body {
 }
 
 @media all and (orientation: portrait) {
-  /* line 191, ../sass/page.sass */
-  .btn.boy, .btn.girl {
+  /* line 192, ../sass/page.sass */
+  #btn .btn.boy, #btn .btn.girl {
     top: 30%;
     height: 65%;
     width: 42.5%;
   }
-  /* line 196, ../sass/page.sass */
-  .btn.boy {
+  /* line 197, ../sass/page.sass */
+  #btn .btn.boy {
     left: 5%;
   }
-  /* line 198, ../sass/page.sass */
-  .btn.boy {
+  /* line 199, ../sass/page.sass */
+  #btn .btn.boy {
     left: 52.5%;
   }
 }

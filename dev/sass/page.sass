@@ -22,12 +22,19 @@
     +scale(20)
     +opacity(0)
   100%
-    top: -100%
+    top: -1000%
     +scale(1)
     +opacity(0)
 
 body
   background: inline-image('bg.png')
+
+.boy
+  color: #4fa950
+  padding: 4px 0px
+.girl
+  color: #ce483d
+  padding: 4px 0px
 
 #navi
   .brand
@@ -60,9 +67,9 @@ body
   .display-player &
     right: 0px
   form
-    margin-top: 42px
+    margin-top: 52px
     .name
-      width: 180px
+      width: 190px
   .del
     width: 98px
     text-align: right
@@ -139,16 +146,25 @@ body
   .assignment
     z-index: 992
     position: absolute
-    top: -100%
+    top: -1000%
     left: 5%
     width: 90%
     margin-top: 60px
     text-align: center
-    font-size: 96px
-    line-height: 108px
+    font-size: 106px
+    line-height: 118px
     color: #FFF
     +opacity(0)
     +animation(assignment-hide 0.5s ease-in-out 0s 1)
+
+@media all and (max-width: 640px)
+  #view
+    .target
+      font-size: 24px
+      height: 28px
+    .assignment
+      font-size: 54px
+      line-height: 66px
 
 #button
   .btn
@@ -169,3 +185,15 @@ body
     &.btn-girl
       top: 60%
       background: #ce483d
+
+@media all and (orientation:portrait)
+  .btn
+    &.boy,
+    &.girl
+      top: 30%
+      height: 65%
+      width: (100% - 15%) / 2
+    &.boy
+      left: 5%
+    &.boy
+      left: 10% + (100% - 15%) / 2
